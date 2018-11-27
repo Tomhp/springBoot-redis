@@ -1,3 +1,4 @@
+/*
 package com.lee.springboot.MySystem.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -11,14 +12,17 @@ import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
+*/
 /**
  * @Description: redis 配置
  * @Author: Lee
  * @DateTime: 2018/11/27 15:30
- */
+ *//*
+
 @Configuration
 @EnableCaching
 public class RedisConfig {
@@ -40,7 +44,7 @@ public class RedisConfig {
         serializer.setObjectMapper(mapper);
         template.setValueSerializer(serializer);
         //使用StringRedisSerializer 序列化和反序列化redis的key
-        template.setKeySerializer(new StringRedisSerializer());
+        template.setKeySerializer(new GenericJackson2JsonRedisSerializer());
         template.afterPropertiesSet();
         return template;
     }
@@ -52,3 +56,4 @@ public class RedisConfig {
         return stringRedisTemplate;
     }
 }
+*/

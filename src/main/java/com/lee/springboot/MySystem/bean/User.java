@@ -1,8 +1,8 @@
 package com.lee.springboot.MySystem.bean;
 
 import java.io.Serializable;
-
 public class User implements Serializable {
+    private static final long serialVersionUID = -5016131261453662180L;
     private String name;
     private String sex;
 
