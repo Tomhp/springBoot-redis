@@ -21,6 +21,7 @@ public class TestController {
         redisTemplate.opsForValue().set("person",user);
         String key = RedisKeyPrefix.PERSON;
         boolean hasKey = redisTemplate.hasKey(key);
+
         if (hasKey) { // 从缓存中取
           User  user2 = (User) redisTemplate.opsForValue().get(key);
 
