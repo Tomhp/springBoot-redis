@@ -1,0 +1,23 @@
+#∂Àø⁄≈‰÷√
+server:
+  port: 8008
+
+#mysql≈‰÷√
+spring:
+   datasource:
+       driver-class-name: com.mysql.jdbc.Driver
+       url: jdbc:mysql://47.93.195.158:3306/restaurant?useUnicode=true&characterEncoding=utf8
+       username: root
+       password: RootLHP
+      ## type: com.alibaba.druid.pool.DruidDataSource
+
+#redis≈‰÷√
+redis:
+      host: 127.0.0.1
+      port: 6379
+      password:
+      pool:
+        max-active: 100
+        max-idle: 100
+        max-wait: 1000
+      timeout: 100000
